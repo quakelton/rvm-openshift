@@ -39,8 +39,8 @@ Options
 
 Actions
 
-  master - Install RVM master branch from xiy rvm repo (Default).
-  stable - Install RVM stable branch from xiy rvm repo.
+  master - Install RVM master branch from quakelton rvm repo (Default).
+  stable - Install RVM stable branch from quakelton rvm repo.
   help   - Display CLI help (this output)
 
 Branches:
@@ -53,7 +53,7 @@ Branches:
   Defaults:
 
     branch: master
-    repo:   xiy
+    repo:   quakelton
 
 "
 }
@@ -76,9 +76,9 @@ install_release()
   _version=$1
   log "Downloading RVM version ${_version}"
   get_and_unpack \
-    https://github.com/xiy/rvm-openshift/tarball/master \
+    https://github.com/quakelton/rvm-openshift/tarball/master \
     rvm-openshift-master.tar.gz \
-    xiy-rvm-openshift-
+    quakelton-rvm-openshift-
 }
 
 install_head()
@@ -86,7 +86,7 @@ install_head()
   typeset _repo _branch
   case "$1" in
     (/*)
-      _repo=xiy
+      _repo=quakelton
       _branch=${1#/}
       ;;
     (*/)
@@ -98,7 +98,7 @@ install_head()
       _branch=${1#*/}
       ;;
     (*)
-      _repo=xiy
+      _repo=quakelton
       _branch=$1
       ;;
   esac
