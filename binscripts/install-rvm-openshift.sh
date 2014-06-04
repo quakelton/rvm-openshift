@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-libyaml_package="yaml-0.1.4"
+libyaml_package="yaml-0.1.6"
 libyaml_url="http://pyyaml.org/download/libyaml/${libyaml_package}.tar.gz"
-rvm_installer="https://raw.github.com/xiy/rvm-openshift/master/binscripts/rvm-installer"
+rvm_installer="https://raw.githubusercontent.com/xiy/rvm-openshift/master/binscripts/rvm-installer"
 
 echo "=== Are we in the data path...?"
 if [[ ! ${pwd} == ${OPENSHIFT_DATA_DIR} ]]; then
